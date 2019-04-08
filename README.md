@@ -8,7 +8,10 @@ Simple Apollo GraphQL Server using GraphQL Voyager.
 
 # Running Server
 
+    # Run server and reload on file change.
     npm dev
+
+    # Run server.
     npm start
 
 By default the Graph visualization will be available here:

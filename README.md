@@ -38,6 +38,7 @@ By default the Graph visualization will be available here:
 ```
 
 **Response Body**
+
 The `dependenciesAlive` property is returned by the resolver, while the `users` property returns random mock data based on the scalar type.
 ```
 {

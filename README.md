@@ -23,6 +23,8 @@ By default the Graph visualization will be available here:
 
 ## Usage
 
+![Query Tool Example](./playground-example.png)
+
 ### Example GraphQL Query Tool Request/Response
 
 **Query**

@@ -1,4 +1,4 @@
-import { ApolloServer, makeExecutableSchema } from 'apollo-server-koa';
+import { ApolloServer, makeExecutableSchema, addMockFunctionsToSchema } from 'apollo-server-koa';
 import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
 import { koa as voyagerMiddleware } from 'graphql-voyager/middleware';
@@ -12,19 +12,19 @@ const typeDefs = `
     name: String
     person: Person
   }
-
   type Person {
     name: String
+    isOnline: Boolean
   }
-
   type Query {
     users: [User]
+    dependenciesAlive: Boolean
   }
 `;
 
 const resolvers = {
   Query: {
-
+    dependenciesAlive: () => true
   }
 };
 
@@ -37,9 +37,9 @@ const schema = makeExecutableSchema({
     allowResolversNotInSchema: true
   }
 });
+addMockFunctionsToSchema({ schema, preserveResolvers: true });
 
 const server = new ApolloServer({
-  mocks: true,
   schema
 });
 const app = new Koa();

@@ -1,6 +1,8 @@
 # GraphQL Visual Builder
 
-Simple Apollo GraphQL Server using GraphQL Voyager.
+Simple Apollo GraphQL Server using GraphQL Voyager with stubbed out functionality.
+
+![Voyager Example](./voyager-example.png)
 
 ## Setup
 
